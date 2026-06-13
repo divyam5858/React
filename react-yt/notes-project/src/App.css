@@ -85,3 +85,10 @@ button{
     color: black;
     padding: 15px;
 }
+
+.card button{
+    border: 1px solid rgb(175, 167, 167);
+    border-radius: 10px;
+    padding: 4px;
+    width: 130px;
+}

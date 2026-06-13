@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "./App.css";
 const App = () => {
 
+
+
 const submithandler=(e)=>{
     e.preventDefault()
     
@@ -13,6 +15,15 @@ const submithandler=(e)=>{
     setTitle('')
     setDetails('')
 }
+
+const deletenote=(i)=>{
+// console.log("note deleted")
+  const copytask = [...task]
+  // console.log(copytask)
+  copytask.splice(i,1) //removes the element to be deleted 
+  settask(copytask)
+}
+
 const [title, setTitle]=useState('')
 const [details,setDetails]=useState('')
 
@@ -20,9 +31,11 @@ const [task,settask]=useState([])
 
   return (
     <div className="Container">
+
       <div className="addnote">
         <h1>Add Notes</h1>
         <form onSubmit={submithandler}>
+
           <div className="inp">
             <input
               className="head"
@@ -41,9 +54,8 @@ const [task,settask]=useState([])
             }} />
           </div>
           <button>Add Note</button>
-        </form>
 
-        
+        </form>
       </div>
 
       <div className="notes">
@@ -52,10 +64,12 @@ const [task,settask]=useState([])
             return <div key={i} className="card">
                 <h2>{e.title}</h2>
                 <h4>{e.details}</h4>
+                <button onClick={()=>{ deletenote(i)}
+                 } >Delete</button>
             </div>
-        })}
-        
+        })}  
       </div>
+
     </div>
   );
 };
