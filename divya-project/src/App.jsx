@@ -8,19 +8,24 @@
 // import  FetchDataList from "./Components/FetchDataList"
 // import FetchDataTable from "./Components/FetchDataTable";
 // import Signup from "./Components/Signup";
-
-import FetchProducts from "./Components/FetchProducts";
-
-
+// import FetchProducts from "./Components/FetchProducts";
+// import DomManipulation from './Components/DomManipulation'
+// import Timer from "./Components/Timer";
+import LifeCycle from "./Components/LifeCycle";
 
 const App = () => {
-  return (
 
-   <FetchProducts/>
+  return (
+    <LifeCycle/>
+
+  // <Timer/>
+  
+  //   <DomManipulation/>
+    // <FetchProducts />
 
     // <FetchDataTable/>
-  //  <FetchDataList/>
-    
+    //  <FetchDataList/>
+
     // <Class/>
     // <Usestate/>
 
@@ -31,7 +36,7 @@ const App = () => {
     //   <Route path = '/home' element={<Home/>}/>
     //   <Route path ='/about' element = {<About/>}/>
     //   <Route path ='/contact' element ={<Contact/>}/>
-    // </Routes>    
+    // </Routes>
     // </BrowserRouter>
   );
 };

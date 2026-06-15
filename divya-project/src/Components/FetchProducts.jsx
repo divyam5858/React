@@ -1,26 +1,37 @@
 import React, { useEffect, useState } from "react";
 import "./FetchProducts.css";
 const FetchProducts = () => {
-  const [country, setCountry] = useState([]);
+  const [Product, setProduct] = useState([]);
 
   useEffect(() => {
     let url = "https://fakestoreapi.com/products";
     fetch(url)
       .then((e) => e.json())
-      .then((data) => setCountry(data));
+      .then((data) => setProduct(data));
   }, []);
+
+  const [input, setInput] = useState("");
+  const [search, setSearch] = useState("");
+
+  const filteredProducts = Product.filter((product) => {
+    return product.title.toLowerCase().includes(search.toLowerCase());
+  });
+  const productsToDisplay = search === "" ? Product : filteredProducts;
 
   return (
     <div className="Container">
       <h1>Check out for More Products!!!</h1>
-
       <div className="search">
-        <input type="text" placeholder="Search Products by Name" />
-        <button>Search</button>
+        <input
+          type="text"
+          placeholder="Search Products by Name"
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+        />
+        <button onClick={() => setSearch(input)}>Search</button>
       </div>
-
       <div className="can">
-        {country.map((e, i) => {
+        {productsToDisplay.map((e, i) => {
           return (
             <div className="Cards" key={i}>
               <div className="img">
