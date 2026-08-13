@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body{
+    width: 100%;
+    min-height: 100vh;
+    background: black;
+}
+
+.Container{
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Left Side */
+.addnote{
+    width: 50%;
+    padding: 20px;
+}
+
+.addnote h1{
+    font-size: 50px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.inp input{
+    width: 100%;
+    height: 110px;
+    border: 2px solid white;
+    background: black;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.inpp input{
+    width: 100%;
+    height: 220px;
+    border: 2px solid white;
+    background: black;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+button{
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    color: black;
+}
+
+/* Right Side */
+.notes{
+    width: 50%;
+    border-left: 1px solid white;
+    padding: 20px;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-content: flex-start;
+    justify-content: center;
+}
+.notes h1{
+    color: white;
+    width: 100%;
+    text-align: center;
+    font-size: 50px;
+}
+
+.card{
+    width: 200px;
+    height: 250px;
+    background: white;
+    border-radius: 10px;
+    color: black;
+    padding: 15px;
+}
+
+.card button{
+    border: 1px solid rgb(175, 167, 167);
+    border-radius: 10px;
+    padding: 4px;
+    width: 130px;
+}

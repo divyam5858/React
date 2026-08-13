@@ -1,0 +1,90 @@
+*{
+    margin: 0px;
+    padding:0px;
+}
+.Container{
+    border: 1px solid black;
+  
+
+}
+.Container h1{
+    background-color: rgb(198, 238, 225);
+    color: rgb(21, 66, 68);
+    height: 40px;
+    text-align: center;
+    align-items: center;
+    padding: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 40px;
+}
+.search{
+    height: 100px;
+}
+
+.search  input{
+        padding: 8px;
+        border: 1px solid rgb(183, 181, 181);
+        font-size: 14px;
+        margin: 20px 10px;
+        width: 550px;
+        border-radius: 10px;
+    }
+
+.search button{
+    border: 1px solid rgb(170, 161, 161);
+    border-radius: 8px;
+    padding: 8px;
+}
+.can{
+    display: flex;
+    flex-wrap:wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.Cards{
+    border: 1px solid rgb(243, 243, 199);
+    border-radius: 10px;
+    margin: 10px;
+    width: 350px;
+    height: 500px;
+    padding: 12px;
+    text-align: left;
+    background-color: beige;
+}
+
+.Cards img{
+    width: 350px;
+    height: 200px;
+    object-fit:scale-down;
+}
+
+.content{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+.content h6{
+    font-size: 16px;
+    color: rgb(22, 22, 81);
+}
+
+.content h3{
+ color: rgb(14, 14, 61);
+ margin: 3px;
+}
+.content h2{
+    color: brown;
+    font-size: 16px;
+    margin: 3px;
+}
+.content h4{
+    text-align: justify;
+ color: black;
+ font-size: 12px;
+ margin: 3px;
+}
+.content h5{
+    color: brown;
+    font-size: 15px;
+}
